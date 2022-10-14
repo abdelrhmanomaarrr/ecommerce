@@ -1,7 +1,13 @@
+import 'package:bloc/bloc.dart';
 import 'package:ecommercee/presentation/screens/login.dart';
 import 'package:flutter/material.dart';
 
+import 'business_logic/my_bloc_observer.dart';
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Bloc.observer = MyBlocObserver();
+
   runApp(const MyApp());
 }
 
